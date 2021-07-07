@@ -1,0 +1,112 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #F6f6f6;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+.container{
+    height: 800px;
+    width: 1000px;
+}
+.container .wrapper{
+    position: relative;
+    height: 650px;
+    width: 100%;
+    border-radius: 15px;
+    background: #787878;
+    border: 7px dashed #3f5efb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper .icon{
+    font-size:200px;
+    color: #fd7490;
+}
+.wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #3a3a3a;
+}
+.wrapper #cancel-btn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #9faffd;
+}
+.wrapper.active:hover #cancel-btn{
+    display: block;
+}
+.wrapper #cancel-btn:hover{
+    color: #3f5bfe;
+}
+.wrapper .file-name{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: #3a3a3a;
+    padding: 5px 0;
+    font-size: 18px;
+    display: none;
+    background: linear-gradient(150deg, #fc466b 0%, #3f5efb 100%);
+}
+.container #custom-btn{
+    margin-top: 30px;
+    width: 100%;
+    position: center;
+    height: 60px;
+    display: block;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #3a3a3a;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(150deg, #fc466b 0%, #3f5efb 100%);
+}
+.input-box{
+    width: 150%;
+    border-radius: 17px;
+    background: linear-gradient(150deg, #fc466b 0%, #3f5efb 100%);
+    padding: 12px;
+    font-size: 25px;
+    transition: all 0.35s ease;
+}
+.input-box:hover{
+    cursor: pointer;
+    background: linear-gradient(300deg, #fc466b 0%, #3f5efb 100%);
+} 
+
+@media (max-width:991px){
+    
+}
+
+

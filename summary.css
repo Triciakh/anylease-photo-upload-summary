@@ -1,0 +1,190 @@
+
+html body{
+    font-family: 'helvetica', sans-serif;
+    background-color: #F6f6f6;
+}
+.container{
+    margin-top: 5%;
+    margin-left: 21%;
+    padding: 45px;
+    height: 550px;
+    width: 900px;
+    color:red;
+    border: 3px solid #3f5bfe;
+    border-radius: 15px;
+
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.03);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.03);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.03);
+}
+
+textarea{
+    margin: 15px;
+    border: #3f5bfe;
+    outline: brown;
+    resize: none;
+}
+
+label.labels{
+    font-weight: 700;
+    font-size: 30px;
+    color: #3a3a3a;
+    font-style: italic;
+    position:relative;
+}
+.textarea_style{
+    margin: 15px;
+    width: auto;
+    height: auto;
+    border: 4px solid #3f5bfe;
+    border-radius: 10px;
+    content: text;
+}
+.textarea_style:hover{
+    -moz-box-shadow: 0px 0px 10px 1px #0e6cb9;
+    -webkit-box-shadow: 0px 0px 10px 1px #1677c7;
+    box-shadow: 0px 0px 10px 1px #0a67b3;
+    border: 1px solid #3f5bfe;
+}
+.textarea_style:focus{
+    -moz-box-shadow: 0px 0px 10px 1px #070808;
+    -webkit-box-shadow: 0px 0px 10px 1px #0e1011;
+    box-shadow: 0px 0px 10px 1px #121314;
+    border: 10px solid #3f5bfe;
+}
+textarea::-webkit-scrollbar {
+    width: 30px;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+span.textarea_count{
+    margin-top: 10px;
+    float: right;
+    font-size: 18px;
+    color: #FD7490;
+}
+
+/**Styling the Submit Button**/
+.center{
+    position: absolute;
+    top: 85%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+    width: 310;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+.center button{
+    position: relative;
+    width: 130%;
+    border: none;
+    padding: 4px 0;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    border-radius: 50px;
+    background: linear-gradient(150deg, #fc466b 0%, #3f5efb 100%);
+    transition: .5s;
+}
+button:hover{
+    background: linear-gradient(300deg, #fc466b 0%, #3f5efb 100%);
+}
+button p{
+    color: #3a3a3a;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 15px;
+}
+button.loading, button.fa{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+button.loading{
+    width: 0%;
+    border-radius: 50px;
+    background: linear-gradient(300deg, #fc466b 0%, #3f5efb 100%);
+}
+button fa{
+    color: cornflowerblue;
+    font-size: 35px;
+    line-height: 65px;
+    transform: scale(0);
+}
+center.active{
+    padding: 0;
+}
+.center.active button{
+    background: aqua;
+    margin-top: 0;
+}
+.center.active button p{
+    display: none;
+}
+.center.active button.loading{
+    width: 100%;
+    transition: all 2.7s ease.6s;
+}
+.center.active button.success{
+    padding: 35px 0;
+    width: 250px;
+}
+.center.active button.success.fa{
+    transform: scale(1);
+    transition: transform .2s linear .3s;
+}
+
+
+
+/* Media Queries*/
+
+@media (max-width:780px){
+
+.container{
+    margin-top: 30%;
+    margin-left: 7%;
+    margin-right: 15%;
+    padding: 45px;
+    color:red;
+    border: 3px solid #3f5bfe;
+    border-radius: 15px;
+
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.03);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.03);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.03);
+}
+textarea{
+    margin: 15px;
+    border: #3f5bfe;
+    outline: brown;
+}
+
+label.labels{
+    font-weight: 700;
+    font-size: 30px;
+    color: #3a3a3a;
+    font-style: italic;
+    position:relative;
+}
+.textarea_style{
+    margin: 15px;
+    width: auto;
+    height: auto;
+    border: 3px solid #3f5bfe;
+    border-radius: 8px;
+    content: text;
+}
+
+@media (max-width:320px){
+    .center{
+        position: absolute;
+        margin-left: 300%;
+        margin-bottom: 5%;
+}

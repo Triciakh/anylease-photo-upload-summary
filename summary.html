@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equi="X-UA-Compatible" content="ie=edge">
+    <title>Summary</title>
+    <link rel="stylesheet" type ="text/css" href="summary.css">
+    
+    
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label class="labels">Summary</label><br>
+            <div class="textarea_style">
+                <textarea class="textarea" id="textarea" onkeyup="charCount()" name="textarea_description" rows="30" cols="107"
+                maxlength="200" minlength="50" placeholder="Describe your Equipment here..."></textarea>
+            </div>
+            <span class="textarea_count">0/200 (Max Character 200)</span>
+        </form>
+    </div>
+
+<!--Beginning of JavaScript for Summary Area-->
+    <script type="text/javasript">
+        function charCount(){
+            var element=document.getElementById('textarea').value.length;
+            document.getElementById('textarea_count').innerHTML.element+"/200 (Max Character 200).";
+        }
+    </script>
+
+<!--html and Javascript for Proceed to Lease-->
+    <div class="center">
+    <button>
+        <p>Proceed to Lease</p>
+        <div class="loading"></div>
+        <div class="fa fa-check"></div>
+    </button>
+    </div>
+
+    <script>
+
+        $(document).resdy(function(){
+            $('button').click(function(){
+                $('button').parent().addClass('active');
+                setTimeout(function(){
+                    $('button').addclass('success');
+                },3400);
+                setTimeout(function(){
+                alert("Leased successfully")
+                    $('button').parent().removeClass('active');
+                    $('button').removeClass('success');
+                }, 4200);
+            });
+        });
+    </script>
+</body>
+</html>
